@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Версия 0.1.0</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Эмоция бота -->
+    <div class="bot-face">
+      <span id="bot-emoji">😊</span>
+    </div>
+
+    <!-- Вкладки -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="chat">💬 Чат</button>
+      <button class="tab-btn" data-tab="chats">📚 Чаты</button>
+      <button class="tab-btn" data-tab="unanswered">❓ Без ответа</button>
+      <button class="tab-btn" data-tab="code">💻 Код</button>
+    </div>
+
+    <!-- Содержимое вкладок -->
+    <div class="tab-content active" id="tab-chat">
+      <div id="chat-box"></div>
+      <div class="input-area">
+        <input type="text" id="user-input" placeholder="Напиши до 3 тем сразу (например: Привет, погода, помощь)..." />
+        <button id="send-btn">➤</button>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-chats">
+      <h3>Сохранённые чаты</h3>
+      <div id="chats-list"></div>
+      <div class="chats-actions">
+        <input type="text" id="chat-name" placeholder="Имя чата..." />
+        <button id="save-chat-btn">💾 Сохранить текущий чат</button>
+      </div>
+    </div>
+
+    <div class="tab-content" id="tab-unanswered">
+      <h3>Вопросы без ответа</h3>
+      <div id="unanswered-list"></div>
+      <button id="clear-unanswered">🗑️ Очистить</button>
+    </div>
+
+    <div class="tab-content" id="tab-code">
+      <h3>Код от бота</h3>
+      <div id="code-list"></div>
+    </div>
+  </div>
+
+  <script src="bot.js"></script>
+</body>
+  </html>
